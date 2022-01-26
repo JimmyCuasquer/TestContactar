@@ -1,0 +1,6 @@
+D:\TestContactar\TestContactar\Servidor\Mensajeria\bin\Debug\Mensajeria.dll
+D:\TestContactar\TestContactar\Servidor\Mensajeria\bin\Debug\Mensajeria.pdb
+D:\TestContactar\TestContactar\Servidor\Mensajeria\obj\Debug\Mensajeria.csproj.CoreCompileInputs.cache
+D:\TestContactar\TestContactar\Servidor\Mensajeria\obj\Debug\Mensajeria.dll
+D:\TestContactar\TestContactar\Servidor\Mensajeria\obj\Debug\Mensajeria.pdb
+D:\TestContactar\TestContactar\Servidor\Mensajeria\obj\Debug\Mensajeria.csprojAssemblyReference.cache

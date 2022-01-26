@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<discovery xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://schemas.xmlsoap.org/disco/">
+  <contractRef ref="http://localhost/Servidor/Servicios/PagoWS.asmx?wsdl" docRef="http://localhost/Servidor/Servicios/PagoWS.asmx" xmlns="http://schemas.xmlsoap.org/disco/scl/" />
+  <soap address="http://localhost/Servidor/Servicios/PagoWS.asmx" xmlns:q1="http://tempuri.org/" binding="q1:PagoWSSoap" xmlns="http://schemas.xmlsoap.org/disco/soap/" />
+  <soap address="http://localhost/Servidor/Servicios/PagoWS.asmx" xmlns:q2="http://tempuri.org/" binding="q2:PagoWSSoap12" xmlns="http://schemas.xmlsoap.org/disco/soap/" />
+</discovery>

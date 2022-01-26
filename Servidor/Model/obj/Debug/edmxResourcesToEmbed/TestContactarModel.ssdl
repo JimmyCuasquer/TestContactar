@@ -1,0 +1,133 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl" Alias="Self" Namespace="TestContactarModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012">
+  <EntityType Name="ESTADOPRESTAMO">
+    <Key>
+      <PropertyRef Name="CODIGO" />
+    </Key>
+    <Property Name="CODIGO" Nullable="false" MaxLength="1" Type="nvarchar" />
+    <Property Name="NOMBRE" Nullable="false" MaxLength="50" Type="nvarchar" />
+  </EntityType>
+  <EntityType Name="PAGO">
+    <Key>
+      <PropertyRef Name="SECUENCIAL" />
+    </Key>
+    <Property Name="SECUENCIALPRESTAMO" Nullable="false" Type="int" />
+    <Property Name="VALORPAGO" Nullable="false" Precision="18" Scale="2" Type="decimal" />
+    <Property Name="FECHA" Nullable="false" Type="datetime" />
+    <Property Name="SALDOPRESTAMO" Nullable="false" Precision="18" Scale="2" Type="decimal" />
+    <Property Name="SECUENCIAL" Nullable="false" StoreGeneratedPattern="Identity" Type="int" />
+  </EntityType>
+  <EntityType Name="PERSONA">
+    <Key>
+      <PropertyRef Name="SECUENCIAL" />
+    </Key>
+    <Property Name="SECUENCIAL" Nullable="false" StoreGeneratedPattern="Identity" Type="int" />
+    <Property Name="TIPOIDENTIFICACION" Nullable="false" MaxLength="3" Type="nvarchar" />
+    <Property Name="IDENTIFICACION" Nullable="false" MaxLength="50" Type="nvarchar" />
+    <Property Name="PRIMERNOMBRE" Nullable="false" MaxLength="50" Type="nvarchar" />
+    <Property Name="SEGUNDONOMBRE" MaxLength="50" Type="nvarchar" />
+    <Property Name="PRIMERAPELLIDO" Nullable="false" MaxLength="50" Type="nvarchar" />
+    <Property Name="SEGUNDOAPELLIDO" MaxLength="50" Type="nvarchar" />
+    <Property Name="ESTAACTIVO" Nullable="false" Type="bit" />
+  </EntityType>
+  <EntityType Name="PRESTAMO">
+    <Key>
+      <PropertyRef Name="SECUENCIAL" />
+    </Key>
+    <Property Name="SECUENCIAL" Nullable="false" StoreGeneratedPattern="Identity" Type="int" />
+    <Property Name="SECUENCIALPERSONA" Nullable="false" Type="int" />
+    <Property Name="MONTO" Nullable="false" Precision="18" Scale="2" Type="decimal" />
+    <Property Name="ESTADO" Nullable="false" MaxLength="1" Type="nvarchar" />
+    <Property Name="SALDO" Nullable="false" Precision="18" Scale="2" Type="decimal" />
+  </EntityType>
+  <EntityType Name="sysdiagrams">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Nullable="false" MaxLength="128" Type="nvarchar" />
+    <Property Name="principal_id" Nullable="false" Type="int" />
+    <Property Name="diagram_id" Nullable="false" StoreGeneratedPattern="Identity" Type="int" />
+    <Property Name="version" Type="int" />
+    <Property Name="definition" Type="varbinary(max)" />
+  </EntityType>
+  <EntityType Name="TIPOIDENTIFICACION">
+    <Key>
+      <PropertyRef Name="CODIGO" />
+    </Key>
+    <Property Name="CODIGO" Nullable="false" MaxLength="3" Type="nvarchar" />
+    <Property Name="NOMBRE" Nullable="false" MaxLength="50" Type="nvarchar" />
+    <Property Name="ESTAACTIVO" Nullable="false" Type="bit" />
+  </EntityType>
+  <Association Name="FK_PAGO_PRESTAMO">
+    <End Type="Self.PRESTAMO" Multiplicity="1" Role="PRESTAMO" />
+    <End Type="Self.PAGO" Multiplicity="*" Role="PAGO" />
+    <ReferentialConstraint>
+      <Principal Role="PRESTAMO">
+        <PropertyRef Name="SECUENCIAL" />
+      </Principal>
+      <Dependent Role="PAGO">
+        <PropertyRef Name="SECUENCIALPRESTAMO" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_PERSONA_TIPOIDENTIFICACION">
+    <End Type="Self.TIPOIDENTIFICACION" Multiplicity="1" Role="TIPOIDENTIFICACION" />
+    <End Type="Self.PERSONA" Multiplicity="*" Role="PERSONA" />
+    <ReferentialConstraint>
+      <Principal Role="TIPOIDENTIFICACION">
+        <PropertyRef Name="CODIGO" />
+      </Principal>
+      <Dependent Role="PERSONA">
+        <PropertyRef Name="TIPOIDENTIFICACION" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_PRESTAMO_ESTADOPRESTAMO">
+    <End Type="Self.ESTADOPRESTAMO" Multiplicity="1" Role="ESTADOPRESTAMO" />
+    <End Type="Self.PRESTAMO" Multiplicity="*" Role="PRESTAMO" />
+    <ReferentialConstraint>
+      <Principal Role="ESTADOPRESTAMO">
+        <PropertyRef Name="CODIGO" />
+      </Principal>
+      <Dependent Role="PRESTAMO">
+        <PropertyRef Name="ESTADO" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_PRESTAMO_PERSONA">
+    <End Type="Self.PERSONA" Multiplicity="1" Role="PERSONA" />
+    <End Type="Self.PRESTAMO" Multiplicity="*" Role="PRESTAMO" />
+    <ReferentialConstraint>
+      <Principal Role="PERSONA">
+        <PropertyRef Name="SECUENCIAL" />
+      </Principal>
+      <Dependent Role="PRESTAMO">
+        <PropertyRef Name="SECUENCIALPERSONA" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="TestContactarModelStoreContainer">
+    <EntitySet Name="ESTADOPRESTAMO" EntityType="Self.ESTADOPRESTAMO" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="PAGO" EntityType="Self.PAGO" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="PERSONA" EntityType="Self.PERSONA" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="PRESTAMO" EntityType="Self.PRESTAMO" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TIPOIDENTIFICACION" EntityType="Self.TIPOIDENTIFICACION" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK_PAGO_PRESTAMO" Association="Self.FK_PAGO_PRESTAMO">
+      <End EntitySet="PRESTAMO" Role="PRESTAMO" />
+      <End EntitySet="PAGO" Role="PAGO" />
+    </AssociationSet>
+    <AssociationSet Name="FK_PERSONA_TIPOIDENTIFICACION" Association="Self.FK_PERSONA_TIPOIDENTIFICACION">
+      <End EntitySet="TIPOIDENTIFICACION" Role="TIPOIDENTIFICACION" />
+      <End EntitySet="PERSONA" Role="PERSONA" />
+    </AssociationSet>
+    <AssociationSet Name="FK_PRESTAMO_ESTADOPRESTAMO" Association="Self.FK_PRESTAMO_ESTADOPRESTAMO">
+      <End EntitySet="ESTADOPRESTAMO" Role="ESTADOPRESTAMO" />
+      <End EntitySet="PRESTAMO" Role="PRESTAMO" />
+    </AssociationSet>
+    <AssociationSet Name="FK_PRESTAMO_PERSONA" Association="Self.FK_PRESTAMO_PERSONA">
+      <End EntitySet="PERSONA" Role="PERSONA" />
+      <End EntitySet="PRESTAMO" Role="PRESTAMO" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

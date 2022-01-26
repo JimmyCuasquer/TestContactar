@@ -1,0 +1,7 @@
+D:\TestContactar\TestContactar\Cliente\Proxies\bin\Debug\Proxies.dll.config
+D:\TestContactar\TestContactar\Cliente\Proxies\bin\Debug\Proxies.dll
+D:\TestContactar\TestContactar\Cliente\Proxies\bin\Debug\Proxies.pdb
+D:\TestContactar\TestContactar\Cliente\Proxies\obj\Debug\Proxies.csprojAssemblyReference.cache
+D:\TestContactar\TestContactar\Cliente\Proxies\obj\Debug\Proxies.csproj.CoreCompileInputs.cache
+D:\TestContactar\TestContactar\Cliente\Proxies\obj\Debug\Proxies.dll
+D:\TestContactar\TestContactar\Cliente\Proxies\obj\Debug\Proxies.pdb

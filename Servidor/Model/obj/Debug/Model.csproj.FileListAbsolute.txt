@@ -1,0 +1,11 @@
+D:\TestContactar\TestContactar\Servidor\Model\bin\Debug\Model.dll.config
+D:\TestContactar\TestContactar\Servidor\Model\bin\Debug\Model.dll
+D:\TestContactar\TestContactar\Servidor\Model\bin\Debug\Model.pdb
+D:\TestContactar\TestContactar\Servidor\Model\bin\Debug\EntityFramework.dll
+D:\TestContactar\TestContactar\Servidor\Model\bin\Debug\EntityFramework.SqlServer.dll
+D:\TestContactar\TestContactar\Servidor\Model\bin\Debug\EntityFramework.xml
+D:\TestContactar\TestContactar\Servidor\Model\bin\Debug\EntityFramework.SqlServer.xml
+D:\TestContactar\TestContactar\Servidor\Model\obj\Debug\Model.csproj.CoreCompileInputs.cache
+D:\TestContactar\TestContactar\Servidor\Model\obj\Debug\Model.csproj.CopyComplete
+D:\TestContactar\TestContactar\Servidor\Model\obj\Debug\Model.dll
+D:\TestContactar\TestContactar\Servidor\Model\obj\Debug\Model.pdb

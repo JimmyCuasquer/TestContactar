@@ -1,0 +1,17 @@
+D:\TestContactar\TestContactar\Cliente\Cliente\bin\Debug\Cliente.exe.config
+D:\TestContactar\TestContactar\Cliente\Cliente\bin\Debug\Cliente.exe
+D:\TestContactar\TestContactar\Cliente\Cliente\bin\Debug\Cliente.pdb
+D:\TestContactar\TestContactar\Cliente\Cliente\bin\Debug\Proxies.dll
+D:\TestContactar\TestContactar\Cliente\Cliente\bin\Debug\Proxies.pdb
+D:\TestContactar\TestContactar\Cliente\Cliente\bin\Debug\Proxies.dll.config
+D:\TestContactar\TestContactar\Cliente\Cliente\obj\Debug\Cliente.csprojAssemblyReference.cache
+D:\TestContactar\TestContactar\Cliente\Cliente\obj\Debug\Cliente.Cliente.resources
+D:\TestContactar\TestContactar\Cliente\Cliente\obj\Debug\Cliente.PersonasFrm.resources
+D:\TestContactar\TestContactar\Cliente\Cliente\obj\Debug\Cliente.Properties.Resources.resources
+D:\TestContactar\TestContactar\Cliente\Cliente\obj\Debug\Cliente.csproj.GenerateResource.cache
+D:\TestContactar\TestContactar\Cliente\Cliente\obj\Debug\Cliente.csproj.CoreCompileInputs.cache
+D:\TestContactar\TestContactar\Cliente\Cliente\obj\Debug\Cliente.csproj.CopyComplete
+D:\TestContactar\TestContactar\Cliente\Cliente\obj\Debug\Cliente.exe
+D:\TestContactar\TestContactar\Cliente\Cliente\obj\Debug\Cliente.pdb
+D:\TestContactar\TestContactar\Cliente\Cliente\obj\Debug\Cliente.PrestamoFrm.resources
+D:\TestContactar\TestContactar\Cliente\Cliente\obj\Debug\Cliente.PagoFrm.resources
